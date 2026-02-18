@@ -1,8 +1,18 @@
-export default function Sidebar(){
+export default function Sidebar({ isOpen, setIsOpen}){
     return (
-        <div className="w-64 h-scren bg-gray-900 text-white fixed">
-            <div className="p-6 text-2xl font-bold border-b border-gray-700">
-                MyDashboard
+        <>
+        {/* overlay for mobile */}
+        {isOpen && (
+            <div className="fixed inset-0 bg-black opacity-50 lg:hiden"
+            onClick={() =>setIsOpen(false)} 
+            />
+        )}
+        <div className={`fixed lg:static z-50 w-64 h-full bg-gray-900 text-white transform
+            ${isOpen ? "translate-x-0" : "-translate-x-full"}
+            lg: translate-x-0 transition-transform duration-300
+            `}>
+            <div  className="p-6 text-2xl font-bold border-b border-gray-700">
+                My Dashboard
             </div>
             <ul className="p-4 space-y-4">
                 <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">
@@ -11,10 +21,11 @@ export default function Sidebar(){
                 <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">
                     Analytics
                 </li>
-                <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">
+                <li className="hover:bg-gray-700 rounded cursor-pointer">
                     Settings
                 </li>
             </ul>
         </div>
-    )
+        </>
+    );
 }
