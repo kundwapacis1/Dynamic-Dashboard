@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Sidebar({ isOpen, setIsOpen}){
     return (
         <>
@@ -15,15 +16,15 @@ export default function Sidebar({ isOpen, setIsOpen}){
                 My Dashboard
             </div>
             <ul className="p-4 space-y-4">
-                <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">
+                <Link to="/" className="hover:bg-gray-700 p-2 rounded cursor-pointer">
                     Dashboard
-                </li>
-                <li className="hover:bg-gray-700 p-2 rounded cursor-pointer">
+                </Link>
+                <Link to="/analytics" className="hover:bg-gray-700 p-2 rounded cursor-pointer">
                     Analytics
-                </li>
-                <li className="hover:bg-gray-700 rounded cursor-pointer">
+                </Link>
+                <Link to="/settings" className="hover:bg-gray-700 rounded cursor-pointer">
                     Settings
-                </li>
+                </Link>
             </ul>
         </div>
         </>

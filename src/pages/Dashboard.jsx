@@ -1,4 +1,6 @@
 import StatCard from "../components/StatCard";
+import SalesChart from "../components/SalesChart";
+
 
 export default function Dashboard(){
     return (
@@ -7,7 +9,9 @@ export default function Dashboard(){
                 <StatCard title="Total Users" value="1,245" />
                 <StatCard title="Revenue" value="$32,400" />
                 <StatCard title="Orders" value="320" />
+
             </div>
+            <SalesChart />
         </div>
-    )
+    );
 }
