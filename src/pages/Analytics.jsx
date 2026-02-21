@@ -1,5 +1,9 @@
+
+
 export default function Analytics(){
     return (
-        <h1 className="text-2xl font-bold">Analytics Data</h1>
+
+            
+        <h2 className="text-2xl font-bold">Analytics Data</h2>
     );
 }
