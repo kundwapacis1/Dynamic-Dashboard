@@ -10,7 +10,7 @@ export default function App() {
   const [isOpen, setIsOpen] =useState(false);
 
   return (
-    <div className="flex">
+    <div className="flex-1 flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900">
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <div className="flex-1 flex flex-col min-h-screen bg-gray-100">
